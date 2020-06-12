@@ -1,5 +1,10 @@
 class TasksController < ApplicationController
 
+  # 一覧表示するためのアクション
+  def index
+    @tasks = Task.all
+  end
+
   # 新規登録するためのアクション
   def new
     @task = Task.new
@@ -7,7 +12,7 @@ class TasksController < ApplicationController
 
   # 更新するためのアクション
   def create
-    Task.create(user_params)
+    Task.create(task_params)
   end
 
   # データベースに登録するデータを制限するためのParameterStrongの記載
