@@ -20,6 +20,17 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
+  # 編集をするためのアクション
+  def edit
+    @task = Task.find(params[:id])
+  end
+
+  # 更新するためのアクション
+  def update
+    task = Task.find(params[:id])
+    task.update(task_params)
+  end
+
   # データベースに登録するデータを制限するためのParameterStrongの記載
   private
   def task_params
