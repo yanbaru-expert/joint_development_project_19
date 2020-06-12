@@ -31,6 +31,12 @@ class TasksController < ApplicationController
     task.update(task_params)
   end
 
+  # 削除するためのアクション
+  def destroy
+    task = Task.find(params[:id])
+    task.destroy
+  end
+
   # データベースに登録するデータを制限するためのParameterStrongの記載
   private
   def task_params
