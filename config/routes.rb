@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  resources :users
+feature/crud-for-messages
+    # resourcesを使用したルーティング
+    resources  :users
 end
