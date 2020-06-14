@@ -1,0 +1,10 @@
+<H1>メッセージ 一覧</H1>
+<%= link_to "投稿画面へ", new_message_path %>
+<% @messages.each do |messages| %>
+  <p>
+    <%= messages.detail %>
+    <%= link_to "詳細", message_path(messages.id)%>
+    <%= link_to "編集", edit_message_path(messages.id), method: :get %>
+    <%= link_to "削除", message_path(messages.id), method: :delete, data: {confirm: "消去しますか？"}  %>
+  </p>
+<% end %>

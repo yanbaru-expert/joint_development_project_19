@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
+ HEAD
+ HEAD
   resources :users
 end
-=======
-    # resourcesを使用したルーティング
-    resources  :tasks
+
+  # resourcesを使用したルーティング
+  resources  :tasks
 end
->>>>>>> master
+master
+
+  resources :messages
+  #resourceを使用したルーティング
+  resources :tasks
+end
+master
