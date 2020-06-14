@@ -1,6 +1,6 @@
-class CreateUsers < ActiveRecord::Migration[5.2]
+class CreateMessages < ActiveRecord::Migration[5.2]
   def change
-    create_table :users do |t|
+    create_table :messages do |t|
       t.string :title
       t.string :detail
       t.timestamps
