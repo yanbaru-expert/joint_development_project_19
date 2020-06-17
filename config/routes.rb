@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  resources :users
+
   resources :messages
-  #resourceを使用したルーティング
+  
   resources :tasks
+  
 end
+

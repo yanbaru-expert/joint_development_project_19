@@ -1,0 +1,7 @@
+<%= link_to  "一覧画面へ", users_path %>
+<p>
+  <%= @user.name %>
+  <%= @user.age %>
+</p>
+<%= link_to  "編集", edit_user_path(@user.id) %>
+<%= link_to  "削除",  user_path(@user.id), method: :delete %>

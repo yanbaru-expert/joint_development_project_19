@@ -1,0 +1,7 @@
+<h1>ユーザー一覧</h1>
+<%= link_to "投稿画面へ", new_user_path %>
+<% @users.each do |user| %>
+  <p>
+    <%= link_to "#{user.name}", user_path(user.id) %>
+  </p>
+<% end %>
